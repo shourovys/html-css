@@ -49,37 +49,33 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// adding animate On Scroll
 document.addEventListener('DOMContentLoaded', function () {
   const elementsToAnimate = document.querySelectorAll('[data-watch]');
 
-  function isInViewport(element, offset) {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top >= -offset &&
-      rect.left >= -offset &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight) +
-          offset &&
-      rect.right <=
-        (window.innerWidth || document.documentElement.clientWidth) + offset
-    );
-  }
+  // Intersection Observer options
+  const options = {
+    root: null, // viewport
+    rootMargin: '0px', // no margin
+    threshold: 0.25, // 25% of the element visible
+  };
 
-  function animateOnScroll() {
-    elementsToAnimate.forEach(function (element) {
-      if (
-        isInViewport(element, 250) &&
-        !element.classList.contains('_watcher-view')
-      ) {
-        element.classList.add('_watcher-view');
+  // Callback function for Intersection Observer
+  const callback = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Add class when element is in viewport
+        entry.target.classList.add('_watcher-view');
+        // Stop observing after the class is added to improve performance
+        observer.unobserve(entry.target);
       }
     });
-  }
+  };
 
-  // Initially check if elements are in viewport on page load
-  animateOnScroll();
+  // Create Intersection Observer instance
+  const observer = new IntersectionObserver(callback, options);
 
-  // Add scroll event listener to check if elements come into view while scrolling
-  window.addEventListener('scroll', animateOnScroll);
+  // Observe each element
+  elementsToAnimate.forEach((element) => {
+    observer.observe(element);
+  });
 });

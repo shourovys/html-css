@@ -7,7 +7,7 @@
     <meta name="format-detection" content="telephone=no">
     <!-- <style>body{opacity: 0;}</style> -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style.min.css">
+    <!-- <link rel="stylesheet" href="css/style.min.css"> -->
     <link rel="shortcut icon" href="favicon.ico">
     <!-- <meta name="robots" content="noindex, nofollow"> -->
     <!-- <meta name="robots" content="noindex, nofollow"> -->
@@ -43,7 +43,6 @@
                     <div class="header-sub__container">
                         <a href="" class="header-sub__logo"><img src="img/header/logo.svg" alt=""></a>
                         <div class="header__menu menu">
-                            <button type="button" class="menu__icon icon-menu"><span></span></button>
                           <!-- menu links will come hear -->
                             <button type="button" data-popup="#popup" class="menu__popup button">Request A Demo</button>
                         </div>
@@ -53,7 +52,7 @@
             <!-- blog details section  -->
             <main class="page">
                 <!-- blog title  -->
-                <section class="page__answering answering-page">
+                <section class="page__answering blog-header">
                     <!-- SEO Optimization: Meta Tags -->
                     <meta property="og:title"
                         content="TRM Talks: Answering the Questions in Treasury's DeFi Risk Assessment">
@@ -66,14 +65,14 @@
                     <meta name="twitter:description"
                         content="Dive into TRM Talks for an in-depth analysis of the Treasury's DeFi Risk Assessment and its implications.">
                     <meta name="twitter:image" content="your-twitter-image-url.jpg">
-                    <div data-watch data-watch-once class="answering-page__container">
-                        <div class="answering-page__date "><a class="answering-page__link " href="#">TRM TALKS</a> | JUL
+                    <div data-watch data-watch-once class="blog-header__container">
+                        <div class="blog-header__date "><a class="blog-header__link " href="#">TRM TALKS</a> | JUL
                             13, 2023</div>
-                        <h1 class="answering-page__title title">
+                        <h1 class="blog-header__title title">
                             TRM Talks: Answering the Questions in Treasury's DeFi Risk Assessment
                         </h1>
-                        <div class="answering-page__subtitle">
-                            <a class="answering-page__sublink _icon-menu_arrow" href="#">TRM Insights</a> Insights
+                        <div class="blog-header__subtitle">
+                            <a class="blog-header__sublink _icon-menu_arrow" href="#">TRM Insights</a> Insights
                         </div>
                     </div>
                 </section>
@@ -95,7 +94,6 @@
                     <meta name="twitter:image" content="path-to-your-twitter-image/blog-single-img.png">
                     <meta name="twitter:url" content="YOUR_PAGE_URL">
 
-                    <!-- Додаткові мета-теги -->
                     <meta name="description"
                         content="In-depth analysis of the UK's upcoming financial regulations for cryptoassets, from DeFi to NFTs. Read now for expert insights.">
                     <meta name="keywords"
@@ -269,7 +267,7 @@
                 </section>
                
                 <!-- similar blogs  -->
-                <section data-watch data-watch-once class="page__similar similar-page">
+                <section data-watch data-watch-once class="page__similar similar-blogs">
                     <meta name="description"
                         content="Explore similar blog posts about decentralized finance, including detailed analyses and insights into the latest trends and developments.">
                     <meta name="keywords"
@@ -296,12 +294,12 @@
                     <meta name="robots" content="index, follow">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-                    <div class="similar-page__container">
-                        <h2 class="similar-page__title title ">Similar Blog</h2>
-                        <div class="similar-page__subtitle ">Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                    <div class="similar-blogs__container">
+                        <h2 class="similar-blogs__title title ">Similar Blog</h2>
+                        <div class="similar-blogs__subtitle ">Lorem ipsum dolor sit amet, consectetur adipisicing elit
                         </div>
-                        <div class="similar-page__items">
-                            <a href="#" class="similar-page__item item-similar">
+                        <div class="similar-blogs__items">
+                            <a href="#" class="similar-blogs__item item-similar">
                                 <div class="item-similar__image ">
                                     <picture>
                                         <source srcset="img/page-blog-details/similar/blog-img-01.webp"
@@ -319,7 +317,7 @@
                                     </p>
                                 </div>
                             </a>
-                            <a href="#" class="similar-page__item item-similar">
+                            <a href="#" class="similar-blogs__item item-similar">
                                 <div class="item-similar__image ">
                                     <picture>
                                         <source srcset="img/page-blog-details/similar/blog-img-02.webp"
@@ -337,7 +335,7 @@
                                     </p>
                                 </div>
                             </a>
-                            <a href="#" class="similar-page__item item-similar">
+                            <a href="#" class="similar-blogs__item item-similar">
                                 <div class="item-similar__image ">
                                     <picture>
                                         <source srcset="img/page-blog-details/similar/blog-img-03.webp"
@@ -355,7 +353,7 @@
                                     </p>
                                 </div>
                             </a>
-                            <a href="#" class="similar-page__item item-similar">
+                            <a href="#" class="similar-blogs__item item-similar">
                                 <div class="item-similar__image ">
                                     <picture>
                                         <source srcset="img/page-blog-details/similar/blog-img-04.webp"
@@ -378,7 +376,7 @@
                 </section>
 
                 <!-- Subscribe section  -->
-                <section data-watch data-watch-once class="page__last last-page">
+                <section data-watch data-watch-once class="page__last subscribe">
                     <!-- Basic Meta Tags -->
                     <meta charset="UTF-8">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -403,18 +401,18 @@
                     <meta name="twitter:url" content="your-website-url.com/subscribe">
                     <!-- Optionally, if your organization has a Twitter username -->
                     <meta name="twitter:site" content="@yourTwitterHandle">
-                    <div class="last-page__container">
-                        <h3 class="last-page__title title">Subscribe to our latest insights</h3>
-                        <form class="last-page__form form" action="#">
+                    <div class="subscribe__container">
+                        <h3 class="subscribe__title title">Subscribe to our latest insights</h3>
+                        <form class="subscribe__form form" action="#">
                             <input data-required="email" type="text" name="form[email]"
                                 data-error="Please complete this required field" placeholder="Email*"
-                                class="input last-page__input">
-                            <button type="submit" class="last-page__btn button">SUBSCRIBE</button>
+                                class="input subscribe__input">
+                            <button type="submit" class="subscribe__btn button">SUBSCRIBE</button>
                         </form>
-                        <div class="last-page__social-media">
-                            <a href="#" class="last-page__item _icon-icon-linkedin"></a>
-                            <a href="#" class="last-page__item _icon-icon-twitter"></a>
-                            <a href="#" class="last-page__item _icon-icon-youtube"></a>
+                        <div class="subscribe__social-media">
+                            <a href="#" class="subscribe__item _icon-icon-linkedin"></a>
+                            <a href="#" class="subscribe__item _icon-icon-twitter"></a>
+                            <a href="#" class="subscribe__item _icon-icon-youtube"></a>
                         </div>
                     </div>
                 </section>
